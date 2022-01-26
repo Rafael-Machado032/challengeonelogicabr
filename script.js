@@ -70,4 +70,4 @@ function Decodificar(texto) {
     document.getElementById("btn-copy").addEventListener("click", function () {
       var inputMensagem = document.getElementById("msg");
       copiar(inputMensagem);
-    });
+    });    });
