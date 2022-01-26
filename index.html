@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,30 @@
   <title>Desafio de Criptografia</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1 class="titulo">código secreto</h1>
 
   <main class="main">
-    <section class="form box">
-      <form action="#">
-        <label for="input-texto">Apenas letras minúsculas, sem acento</label>
-        <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="insira o texto aqui" rows="4" cols="50"></textarea>
-        <input class="btn" type="button" value="criptografar!" id="btn-cripto">
-        <input class="btn" type="button" value="descriptografar!" id="btn-descripto">
-      </form>
-    </section>
-  
-    <section class="msg box">
-      <h2 id="">Mensagem criptografada:</h2>
-      <textarea class="text-input" type="text" name="msg" id="msg" placeholder="insira o texto aqui" rows="4" cols="50" readonly></textarea>
-      <input class="btn" type="button" value="copiar" id="btn-copy">
-    </section>
+      <section class="form box">
+        <form action="#">
+          <label for="input-texto">Apenas letras minúsculas, sem acento</label>
+          <textarea class="text-input" type="text" name="input-texto" id="input-texto" placeholder="insira o texto aqui"
+            rows="4" cols="50"></textarea>
+          <input class="btn" type="button" value="criptografar!" id="btn-cripto">
+          <input class="btn" type="button" value="descriptografar!" id="btn-descripto">
+        </form>
+      </section>
+
+      <section class="msg box">
+        <h2 id="">Mensagem criptografada:</h2>
+        <textarea class="text-input" type="text" name="msg" id="msg" rows="4"
+          cols="50" readonly></textarea>
+        <input class="btn" type="button" value="copiar" id="btn-copy">
+      </section>
   </main>
 
   <script src="script.js"></script>
 </body>
+
 </html>
