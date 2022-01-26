@@ -61,6 +61,9 @@ document.getElementById("btn-cripto").addEventListener("click", function () {
 });
 document.getElementById("btn-descripto").addEventListener("click", function () {
   var textoCodificado = document.getElementById("input-texto").value;
+  if (!entradaValida(textoCodificado)) {
+    return;
+  }
   var textoDecodificado = Decodificar(textoCodificado);
   document.getElementById("msg").value = textoDecodificado;
 });
