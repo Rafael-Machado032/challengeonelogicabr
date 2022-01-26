@@ -33,7 +33,7 @@ function copiar(campo) {
 }
 function entradaValida(texto) {
   if(texto===""){
-    alert("Digite um texto para decodificar!");
+    alert("Digite um texto!");
     return false;
   }
   if (texto.toLowerCase() != texto) {
