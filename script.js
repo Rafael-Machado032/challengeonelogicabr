@@ -15,6 +15,6 @@ Não permite acentuação
 "ai" é convertido para "a"
 "ober" é convertido para "o"
 "ufat" é convertido para "u"
-Apenas letras minúsculas
+Apenas letras minúsculas 
 Não permite acentuação     
 */
