@@ -12,10 +12,9 @@ var items = [
  */
 function Codificar(texto) {
   items.forEach((element) => {
-    var textoProcurar = element[0];
-    var textoSubstituir = element[1];
+    let textoProcurar = element[0];
+    let textoSubstituir = element[1];
     texto = texto.replaceAll(textoProcurar, textoSubstituir);
-    console.log(texto.replaceAll(textoProcurar, textoSubstituir));
   });
   return texto;
 }
@@ -26,8 +25,8 @@ function Codificar(texto) {
  */
 function Decodificar(texto) {
   items.forEach((element) => {
-    var textoProcurar = element[1];
-    var textoSubstituir = element[0];
+    let textoProcurar = element[1];
+    let textoSubstituir = element[0];
     texto = texto.replaceAll(textoProcurar, textoSubstituir);
   });
 
@@ -71,24 +70,24 @@ function entradaValida(texto) {
 
 //botao de desencriptar
 document.getElementById("btn-cripto").addEventListener("click", function () {
-  var textoCodificado = document.getElementById("input-texto").value;
+  let textoCodificado = document.getElementById("input-texto").value;
   if (!entradaValida(textoCodificado)) {
     return;
   }
-  var textoDecodificado = Codificar(textoCodificado);
+  let textoDecodificado = Codificar(textoCodificado);
   document.getElementById("msg").value = textoDecodificado;
 });
 //botao de encriptar
 document.getElementById("btn-descripto").addEventListener("click", function () {
-  var textoNormal = document.getElementById("input-texto").value;
+  let textoNormal = document.getElementById("input-texto").value;
   if (!entradaValida(textoNormal)) {
     return;
   }
-  var textoDecodificado = Decodificar(textoNormal);
+  let textoDecodificado = Decodificar(textoNormal);
   document.getElementById("msg").value = textoDecodificado;
 });
 //botao de copiar
 document.getElementById("btn-copy").addEventListener("click", function () {
-  var inputMensagem = document.getElementById("msg");
+  let inputMensagem = document.getElementById("msg");
   copiar(inputMensagem);
 });
