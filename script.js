@@ -25,14 +25,16 @@ function Decodificar(texto) {
 
   return texto;
 }
+
 function copiar(campo) {
   campo.select();
   campo.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(campo.value);
   alert("O texto foi copiado");
 }
+
 function entradaValida(texto) {
-  if(texto===""){
+  if (texto === "") {
     alert("Digite um texto!");
     return false;
   }
@@ -51,22 +53,27 @@ function entradaValida(texto) {
   });
   return true;
 }
+
+function validaTextoCriptografado(texto) {}
+//botao de desencriptar
 document.getElementById("btn-cripto").addEventListener("click", function () {
-  var textoDecodificado = document.getElementById("input-texto").value;
-  if (!entradaValida(textoDecodificado)) {
-    return;
-  }
-  var textoCodificado = Codificar(textoDecodificado);
-  document.getElementById("msg").value = textoCodificado;
-});
-document.getElementById("btn-descripto").addEventListener("click", function () {
   var textoCodificado = document.getElementById("input-texto").value;
   if (!entradaValida(textoCodificado)) {
     return;
   }
-  var textoDecodificado = Decodificar(textoCodificado);
+  var textoDecodificado = Codificar(textoCodificado);
   document.getElementById("msg").value = textoDecodificado;
 });
+//botao de encriptar
+document.getElementById("btn-descripto").addEventListener("click", function () {
+  var textoNormal = document.getElementById("input-texto").value;
+  if (!entradaValida(textoNormal)) {
+    return;
+  }
+  var textoDecodificado = Decodificar(textoNormal);
+  document.getElementById("msg").value = textoDecodificado;
+});
+//botao de copiar
 document.getElementById("btn-copy").addEventListener("click", function () {
   var inputMensagem = document.getElementById("msg");
   copiar(inputMensagem);
