@@ -5,7 +5,11 @@ var items = [
   ["o", "ober"],
   ["u", "ufat"],
 ];
-
+/**
+ * 
+ * @param {string} texto -Texto para ser codificado
+ * @returns - Texto codificado
+ */
 function Codificar(texto) {
   items.forEach((element) => {
     var textoProcurar = element[0];
@@ -15,7 +19,11 @@ function Codificar(texto) {
   });
   return texto;
 }
-
+/**
+ * 
+ * @param {string} texto - Texto para ser decodificado
+ * @returns - Texto decodificado
+ */
 function Decodificar(texto) {
   items.forEach((element) => {
     var textoProcurar = element[1];
@@ -25,14 +33,21 @@ function Decodificar(texto) {
 
   return texto;
 }
-
+/**
+ * 
+ * @param {string} campo texto para ser copiado 
+ */
 function copiar(campo) {
   campo.select();
   campo.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(campo.value);
   alert("O texto foi copiado");
 }
-
+/**
+ * 
+ * @param {string} texto - Texto para ser validado
+ * @returns true ou false 
+ */
 function entradaValida(texto) {
   if (texto === "") {
     alert("Digite um texto!");
@@ -54,7 +69,6 @@ function entradaValida(texto) {
   return true;
 }
 
-function validaTextoCriptografado(texto) {}
 //botao de desencriptar
 document.getElementById("btn-cripto").addEventListener("click", function () {
   var textoCodificado = document.getElementById("input-texto").value;
