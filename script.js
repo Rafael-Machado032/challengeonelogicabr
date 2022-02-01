@@ -66,7 +66,7 @@ function entradaValida(texto) {
     }
   });
   return true;
-}
+} 
 
 //botao de desencriptar
 document.getElementById("btn-cripto").addEventListener("click", function () {
