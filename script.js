@@ -63,7 +63,7 @@ function entradaValida(texto) {
     if (texto.includes(caractere)) {
       alert("Não pode utilizar acentos!");
       return false;
-    }
+    } 
   });
   return true;
 } 
