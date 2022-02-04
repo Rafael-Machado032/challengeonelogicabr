@@ -18,7 +18,7 @@ function Codificar(texto) {
   });
   return texto;
 }
-/**
+/** 
  * 
  * @param {string} texto - Texto para ser decodificado
  * @returns - Texto decodificado
