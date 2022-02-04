@@ -4,11 +4,11 @@ var items = [
   ["a", "ai"],
   ["o", "ober"],
   ["u", "ufat"],
-];
+]; 
 /**
  * 
  * @param {string} texto -Texto para ser codificado
- * @returns - Texto codificado
+ * @returns - Texto codificado 
  */
 function Codificar(texto) {
   items.forEach((element) => {
@@ -26,7 +26,7 @@ function Codificar(texto) {
 function Decodificar(texto) {
   items.forEach((element) => {
     let textoProcurar = element[1];
-    let textoSubstituir = element[0];
+    let textoSubstituir = element[0]; 
     texto = texto.replaceAll(textoProcurar, textoSubstituir);
   });
 
