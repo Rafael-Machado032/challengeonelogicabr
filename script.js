@@ -64,7 +64,7 @@ function entradaValida(texto) {
       alert("Não pode utilizar acentos!");
       return false;
     } 
-  });
+  }); 
   return true;
 } 
 
